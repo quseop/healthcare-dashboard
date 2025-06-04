@@ -1,5 +1,5 @@
 const SideNavigationBar = () =>
-    (<aside className="h-full w-[15vw] bg-gray-200">
+    (<aside className="h-full w-[20vw] border-r bg-white">
 
     </aside>)
 
