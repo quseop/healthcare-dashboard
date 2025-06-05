@@ -8,6 +8,7 @@ export function Dashboard() {
             {/*Side Navigation Bar*/}
             <SideNavigationBar />
             <main className="w-full flex flex-col gap-10 bg-[#f0f0f0] h-screen">
+                {/*Dashboard Header*/}
                 <ResponsiveHeader />
                 {/*Dashboard Metrics*/}
                 <DashboardMetrics />
