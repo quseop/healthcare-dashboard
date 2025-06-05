@@ -7,11 +7,58 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const SideNavigationBar = () =>
-    (<aside className="h-full px-3 w-[20vw] border-r bg-white">
+const SideNavigationBar = () => {
+
+    const applications = [
+        {
+            title: "Doctor",
+            icon: <Stethoscope size={20}/>,
+        },
+        {
+            title: "Patient",
+            icon: <UsersRound size={20}/>,
+        },
+        {
+            title: "Departments",
+            icon: <Layers size={20}/>,
+        },
+        {
+            title: "Schedule",
+            icon: <CalendarDays size={20}/>
+        },
+        {
+            title:  "Appointment",
+            icon: <CheckSquare2 size={20}/>,
+        },
+        {
+            title: "Report",
+            icon: <NotepadText size={20}/>
+        },
+        {
+            title: "Human Resources",
+            icon: <UserCircle2 size={20}/>,
+        },
+        {
+            title: "Bed Manager",
+            icon: <BedSingle size={20}/>,
+        }
+    ]
+    const others = [
+        <>
+            <CreditCard size={20}/> Payment
+        </>,
+        <>
+            <Mail size={20}/> Mail
+        </>,
+        <>
+            <Package size={20}/> Widgets
+        </>
+    ]
+
+    return (<aside className="h-full px-3 w-[20vw] border-r bg-white">
 
         {/*Company Logo*/}
-        <header className="w-full flex items-center justify-between h-20 border-b">
+        <header className="w-full px-2 flex items-center justify-between h-20 border-b">
             <div className="flex items-center gap-2">
                 <Activity className="text-black" />
                 <h1 className="text-3xl text-center text-black">Health<span className="text-red-500">Care</span></h1>
@@ -19,10 +66,9 @@ const SideNavigationBar = () =>
             <EllipsisVertical className="text-black" size={20} />
         </header>
 
-
         <nav className="w-full flex flex-col gap-3 py-15">
             <Link className="flex w-full gap-2 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-               <LayoutDashboard/> Dashboard
+                <LayoutDashboard/> Dashboard
             </Link>
             <Link className="flex w-full gap-2 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
                 <UserCircle/> Your Account
@@ -32,44 +78,25 @@ const SideNavigationBar = () =>
         {/* Applications */}
         <nav className="flex text-black flex-col text-xl gap-2">
             <p className="text-gray-400 text-sm px-1">APPLICATIONS</p>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <Stethoscope size={20}/> Doctor
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <UsersRound size={20}/> Patient
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <Layers size={20}/> Departments
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <CalendarDays size={20}/> Schedule
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <CheckSquare2 size={20}/> Appointment
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <NotepadText size={20}/> Report
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <UserCircle2 size={20}/> Human Resources
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <BedSingle size={20}/> Bed Manager
-            </Link>
+            {
+                applications.map((app, index) => (
+                    <Link key={index} className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
+                        {app.icon} {app.title}
+                    </Link>
+                ))
+            }
         </nav>
 
         {/* Others */}
         <nav className="flex items-start text-black flex-col text-xl gap-2 py-10">
             <p className="text-gray-400 text-sm px-1">OTHERS</p>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <CreditCard size={20}/> Payment
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <Mail size={20}/> Mail
-            </Link>
-            <Link className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
-                <Package size={20}/> Widgets
-            </Link>
+            {
+                others.map((other, index)=> (
+                    <Link key={index} className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
+                        {other}
+                    </Link>
+                ))
+            }
             <button className="flex gap-2.5 text-red-500 p-2">
                 <LogOut /> Logout
             </button>
@@ -77,5 +104,6 @@ const SideNavigationBar = () =>
 
 
     </aside>)
+}
 
 export default SideNavigationBar;
