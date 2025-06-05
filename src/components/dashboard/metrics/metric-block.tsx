@@ -2,7 +2,7 @@ import {ArrowUp, Ellipsis} from "lucide-react";
 import {JSX} from "react";
 
 
-interface MetricBlockProps {
+export interface MetricBlockProps {
     title: string,
     value: string,
     icon: JSX.Element,
@@ -28,22 +28,32 @@ const MetricBlock = (props: MetricBlockProps) => {
             <section className="flex gap-5 items-center">
                 <p className="text-4xl font-bold">{props.value}</p>
                 {
+                    /**
+                     * If it's not for beds, then show the percentage.
+                     * */
                     !props.forBeds && (<p className="font-medium bg-[#f9f9f9] px-2 rounded-full text-sm flex items-center"><ArrowUp size={15} />15.5%</p>)
                 }
                 {
+                    /**
+                     * If it's for beds, then show the total available.
+                     * */
                     props.forBeds && (<p className="font-medium text-sm flex items-center">{props.totalAvailable} Available</p>)
                 }
             </section>
             {/*Third row of the block*/}
             <section className="flex h-full gap-5 items-center">
                 {
+                    /**
+                     * If it's not for beds, then show the description.
+                     * */
                     !props.forBeds && (<p className="text-sm">
-                        Stay updated with essential details
-                        to streamline medical
-                        support and management.
+                        {props.description}
                     </p>)
                 }
                 {
+                    /**
+                     * If it's for beds, then show the beds.
+                     * */
                     props.forBeds
                     && (<div className="flex justify-between h-full w-full gap-5 items-center">
                         <p className="text-2xl leading-5">
