@@ -1,5 +1,5 @@
 import SideNavigationBar from "@/components/subcomponents/side-navigation-bar";
-import DashboardMetrics from "@/components/dashboard/dashboard-metrics";
+import DashboardMetrics from "@/components/dashboard/metrics/dashboard-metrics";
 import ResponsiveHeader from "@/components/subcomponents/responsive-header";
 
 export function Dashboard() {
