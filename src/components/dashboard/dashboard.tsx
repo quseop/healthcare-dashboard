@@ -1,6 +1,7 @@
 import SideNavigationBar from "@/components/subcomponents/side-navigation-bar";
 import DashboardMetrics from "@/components/dashboard/metrics/dashboard-metrics";
 import ResponsiveHeader from "@/components/subcomponents/responsive-header";
+import {ChartLineMultiple} from "@/components/dashboard/charts/area-chart";
 
 export function Dashboard() {
     return (
@@ -12,6 +13,9 @@ export function Dashboard() {
                 <ResponsiveHeader />
                 {/*Dashboard Metrics*/}
                 <DashboardMetrics />
+                <section className="relative w-[60%] px-10">
+                    <ChartLineMultiple />
+                </section>
             </main>
         </main>
     )

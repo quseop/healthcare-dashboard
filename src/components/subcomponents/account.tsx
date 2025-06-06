@@ -5,7 +5,7 @@ const Account = () => {
     return(
         <section className="flex gap-5 w-72 items-center justify-end">
             <span className="flex w-28 flex-col items-end">
-                <p className="flex-nowrap text-gray-600">Patricia Peters</p>
+                <p className="flex-nowrap text-gray-600">Usman Yousef</p>
                 <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 bg-green-500 rounded-full" />
                     <p className="text-gray-400">Online</p>

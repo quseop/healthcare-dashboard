@@ -15,8 +15,8 @@ export default function ThemeToggle() {
         <button
             onClick={toggleMode}
             className={cn(
-                "relative flex items-center w-16 h-8 rounded-full p-1 transition-all duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-opacity-50",
-                isDarkMode ? "bg-gray-700 focus:ring-gray-400" : "ring-4 bg-gray-300 ring-gray-300",
+                "relative flex items-center w-16 h-8 rounded-full p-1 transition-all duration-300 ease-in-out focus:outline-none  focus:ring-opacity-50",
+                isDarkMode ? "bg-gray-700 focus:ring-gray-400" : "bg-gray-300 ring-gray-300",
             )}
             aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
         >
@@ -24,11 +24,11 @@ export default function ThemeToggle() {
             <div
                 className={cn(
                     "flex items-center justify-center w-6 h-6 rounded-full shadow-md transform transition-all duration-300 ease-in-out",
-                    isDarkMode ? "translate-x-8 bg-gray-800" : "translate-x-0 bg-white",
+                    isDarkMode ? "translate-x-8 bg-gray-800" : "translate-x-0 bg-[#e9ddf3]",
                 )}
             >
                 {/* Icon */}
-                {isDarkMode ? <Moon className="w-4 h-4 text-blue-200" /> : <Sun className="w-4 h-4 text-yellow-500" />}
+                {isDarkMode ? <Moon className="w-4 h-4 text-blue-200" /> : <Sun className="w-4 h-4 text-white" />}
             </div>
 
             {/* Background Icons */}

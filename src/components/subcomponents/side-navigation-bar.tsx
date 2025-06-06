@@ -61,12 +61,12 @@ const SideNavigationBar = () => {
             <header className="w-full px-2 flex items-center justify-between h-20 border-b">
                 <div className="flex items-center gap-2">
                     <Activity className="text-black" />
-                    <h1 className="text-3xl text-center text-black">Health<span className="text-red-500">Care</span></h1>
+                    <h1 className="text-3xl text-center text-black">Health<span className="text-[#D6A4FB]">Care</span></h1>
                 </div>
                 <EllipsisVertical className="text-black" size={20} />
             </header>
 
-            <nav className="w-full flex flex-col gap-3 py-15">
+            <nav className="w-full flex flex-col gap-3 py-10">
                 <Link className="flex w-full gap-2 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
                     <LayoutDashboard/> Dashboard
                 </Link>
@@ -80,7 +80,7 @@ const SideNavigationBar = () => {
                 <p className="text-gray-400 text-sm px-1">APPLICATIONS</p>
                 {
                     applications.map((app, index) => (
-                        <Link key={index} className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
+                        <Link key={index} className="flex w-full gap-2.5 items-center rounded-lg p-2 text-lg hover:bg-blue-100 " href="/">
                             {app.icon} {app.title}
                         </Link>
                     ))
@@ -88,11 +88,11 @@ const SideNavigationBar = () => {
             </nav>
 
             {/* Others */}
-            <nav className="flex items-start text-black flex-col text-xl gap-2 py-10">
+            <nav className="flex items-start text-black flex-col text-lg gap-2 py-10">
                 <p className="text-gray-400 text-sm px-1">OTHERS</p>
                 {
                     others.map((other, index)=> (
-                        <Link key={index} className="flex w-full gap-2.5 items-center text-black rounded-lg p-2 text-xl hover:bg-blue-100 " href="/">
+                        <Link key={index} className="flex w-full gap-2.5 items-center text-black rounded-lg p-2  hover:bg-blue-100 " href="/">
                             {other}
                         </Link>
                     ))
