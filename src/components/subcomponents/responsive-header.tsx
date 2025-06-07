@@ -5,7 +5,7 @@ import Notifications from "@/components/subcomponents/notifications";
 
 const ResponsiveHeader = () => {
     return (
-        <header className="bg-white justify-between items-center gap-10 flex py-5 px-10 w-full">
+        <header className="sticky bg-white justify-between items-center gap-10 flex py-5 px-10 w-full">
             {/* Search Input */}
             <SearchInput />
             {/* Theme Toggle*/}

@@ -58,7 +58,7 @@ export function ChartLineMultiple() {
                 </CardDescription>
             </CardHeader>
             <CardContent className="pl-0 pr-10 ">
-                <ChartContainer className="h-80 w-[100%]" config={chartConfig}>
+                <ChartContainer className="h-80 w-full" config={chartConfig}>
                     <LineChart
                         accessibilityLayer
                         data={chartData}
