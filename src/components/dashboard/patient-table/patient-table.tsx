@@ -101,7 +101,7 @@ export default function PatientTable({
                 </div>
             </section>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto max-sm:text-xsf">
                 <table className="w-full">
                     <thead>
                     <tr className="text-left text-gray-500 dark:text-[#A0B3C9] border-b">

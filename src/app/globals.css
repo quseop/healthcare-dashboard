@@ -120,3 +120,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar-track {
+  background: #112D44;  /* or any color you prefer */
+}

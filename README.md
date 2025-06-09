@@ -1,4 +1,6 @@
-Healthcare Dashboard
+# Healthcare Dashboard
+
+
 
 ## Overview
 A modern, responsive healthcare dashboard built with Next.js and React, designed to provide comprehensive healthcare analytics and patient management capabilities. This application leverages the power of TypeScript for type safety and Tailwind CSS for seamless styling.
@@ -27,3 +29,8 @@ Before you begin, ensure you have the following installed:
 ## Installation
 
 1. Clone the repository:
+
+***
+
+![Alt text](public/screenshots/dashboard_light.png)
+![Alt text](public/screenshots/dashboard_dark.png)
