@@ -17,9 +17,9 @@ export interface MetricBlockProps {
 
 const MetricBlock = (props: MetricBlockProps) => {
     return (
-        <div className="w-full flex flex-col transition-colors text-black p-7 gap-5 rounded-xl h-60 bg-[#f9f9f9] hover:bg-blue-100">
+        <div className="w-full flex flex-col transition-colors text-black dark:text-[#CBD8E2] p-7 max-sm:p-5 gap-5 rounded-xl h-60 bg-[#f9f9f9] dark:bg-[#0B1C2C] hover:bg-blue-100">
             {/*First row of the block*/}
-            <section className="grid items-center grid-cols-[4vw_1fr_1vw]">
+            <section className="grid items-center grid-cols-[4vw_1fr_1vw] max-sm:gap-15 pr-2">
                 {props.icon}
                 <p className="text-xl font-medium">{props.title}</p>
                 <Ellipsis size={25} />
@@ -31,7 +31,7 @@ const MetricBlock = (props: MetricBlockProps) => {
                     /**
                      * If it's not for beds, then show the percentage.
                      * */
-                    !props.forBeds && (<p className="font-medium bg-[#f9f9f9] px-2 rounded-full text-sm flex items-center"><ArrowUp size={15} />15.5%</p>)
+                    !props.forBeds && (<p className="font-medium bg-background px-2 rounded-full text-sm flex items-center"><ArrowUp size={15} />15.5%</p>)
                 }
                 {
                     /**

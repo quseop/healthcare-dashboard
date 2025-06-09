@@ -26,7 +26,7 @@ interface PatientTableProps {
 export default function PatientTable({
                                          patients,
                                          title = "Patient Overview",
-                                         description = "Lorem ipsum dolor sit amet consectetur sit amet ipsum dolor sit amet consectetur.",
+                                         description = "Detailed log of patient check-ins, doctors assigned, and arrival status.",
                                          onEdit,
                                          onDelete,
                                          onTimePeriodChange,
@@ -75,11 +75,11 @@ export default function PatientTable({
     const someSelected = localSelectedPatients.length > 0 && localSelectedPatients.length < patients.length
 
     return (
-        <div className="w-full p-6 bg-white rounded-lg shadow-sm">
-            <section className="flex justify-between">
+        <div className="w-full p-6 bg-[#f9f9f9] text-gray-800 dark:bg-[#0B1C2C] dark:text-[#CBD8E2] rounded-lg shadow-sm">
+            <section className="flex max-sm:flex-col justify-between">
                 <div className="mb-6">
-                    <h2 className="text-xl font-medium text-gray-800">{title}</h2>
-                    <p className="text-gray-500 mt-1">{description}</p>
+                    <h2 className="text-xl font-medium ">{title}</h2>
+                    <p className="text-gray-500 dark:text-[#A0B3C9] mt-1">{description}</p>
                 </div>
 
                 <div className="flex mb-6">
@@ -88,10 +88,10 @@ export default function PatientTable({
                             <button
                                 key={period}
                                 onClick={() => handleTimePeriodChange(period)}
-                                className={`px-4 py-2 font-medium transition-colors ${
+                                className={`px-4 py-2 max-sm:text-xs font-medium transition-colors ${
                                     selectedTimePeriod === period
-                                        ? "bg-purple-100 text-purple-800"
-                                        : "bg-gray-50 text-gray-600 hover:bg-gray-100"
+                                        ? "bg-purple-100 text-purple-800 dark:text-gray-800"
+                                        : "bg-gray-50 dark:bg-[#112D44] dark:text-[#CBD8E2] text-gray-600  hover:bg-gray-100"
                                 }`}
                             >
                                 {period}
@@ -104,7 +104,7 @@ export default function PatientTable({
             <div className="overflow-x-auto">
                 <table className="w-full">
                     <thead>
-                    <tr className="text-left text-gray-500 border-b">
+                    <tr className="text-left text-gray-500 dark:text-[#A0B3C9] border-b">
                         <th className="pb-3 font-normal">
                             <input
                                 type="checkbox"
@@ -137,7 +137,7 @@ export default function PatientTable({
                                     onChange={(e) => handlePatientSelect(patient.id, e.target.checked)}
                                 />
                             </td>
-                            <td className="py-4 text-gray-500">{patient.number}</td>
+                            <td className="py-4 text-gray-500 dark:text-[#A0B3C9]">{patient.number}</td>
                             <td className="py-4">
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-full overflow-hidden">
@@ -151,7 +151,7 @@ export default function PatientTable({
                                     </div>
                                     <div>
                                         <p className="font-medium">{patient.name}</p>
-                                        <p className="text-gray-500 text-sm">{patient.room}</p>
+                                        <p className="text-gray-500 dark:text-[#A0B3C9] text-sm">{patient.room}</p>
                                     </div>
                                 </div>
                             </td>
@@ -160,7 +160,7 @@ export default function PatientTable({
                             <td className="py-4">
                                 <div className="flex items-center gap-1.5">
                                     <div className={`w-2 h-2 rounded-full ${getStatusColor(patient.status)}`}></div>
-                                    <span className="text-gray-600">{patient.status}</span>
+                                    <span className="text-gray-600 dark:text-[#A0B3C9]">{patient.status}</span>
                                 </div>
                             </td>
                             <td className="py-4">{patient.email}</td>

@@ -44,8 +44,8 @@ const chartConfig = {
 
 export function ChartLineMultiple() {
     return (
-        <Card className="shadow-none">
-            <CardHeader className="flex justify-between">
+        <Card className="shadow-none bg-[#f9f9f9] dark:bg-[#0B1C2C] dark:border-none">
+            <CardHeader className="flex max-sm:flex-col justify-between">
                 <CardTitle>Patient Overview</CardTitle>
                 <CardDescription className="flex gap-5">
                     <CardAction className="flex items-center gap-2">
@@ -58,7 +58,7 @@ export function ChartLineMultiple() {
                 </CardDescription>
             </CardHeader>
             <CardContent className="pl-0 pr-10 ">
-                <ChartContainer className="h-80 w-full" config={chartConfig}>
+                <ChartContainer className="h-80 max-sm:h-52 p-0 w-full" config={chartConfig}>
                     <LineChart
                         accessibilityLayer
                         data={chartData}
@@ -90,6 +90,16 @@ export function ChartLineMultiple() {
                             stroke="var(--color-onTime)"
                             strokeWidth={4}
                             dot={false}
+                            className="max-sm:hidden"
+                        />
+                        {/* Mobile Version*/}
+                        <Line
+                            dataKey="onTime"
+                            type="monotone"
+                            stroke="var(--color-onTime)"
+                            strokeWidth={2}
+                            dot={false}
+                            className="max-sm:inline hidden"
                         />
                         <Line
                             dataKey="Late"
@@ -97,7 +107,18 @@ export function ChartLineMultiple() {
                             stroke="var(--color-Late)"
                             strokeWidth={4}
                             dot={false}
+                            className="max-sm:hidden"
                         />
+                        {/* Mobile Version */}
+                        <Line
+                            dataKey="Late"
+                            type="monotone"
+                            stroke="var(--color-Late)"
+                            strokeWidth={2}
+                            dot={false}
+                            className="max-sm:inline hidden"
+                        />
+
                     </LineChart>
                 </ChartContainer>
             </CardContent>

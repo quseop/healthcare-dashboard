@@ -7,24 +7,26 @@ import PatientList from "@/components/dashboard/patient-table/patient-list";
 
 export function Dashboard() {
     return (
-        <main className="flex w-full h-screen">
-            {/*Side Navigation Bar*/}
+        <main className="flex w-full h-screen overflow-hidden">
+            {/* Side Navigation Bar */}
             <SideNavigationBar />
-            <main className="w-full flex flex-col gap-10 bg-[#f0f0f0] overflow-auto h-screen">
-                {/*Dashboard Header*/}
+            <section className="w-full flex flex-col bg-[#f0f0f0] dark:bg-[#112D44] h-screen">
+                {/* Dashboard Header */}
                 <ResponsiveHeader />
-                {/*Dashboard Metrics*/}
-                <DashboardMetrics />
-                {/*Charts and Calendar*/}
-                <div className="w-full flex px-10 gap-5">
-                    <section className="relative w-full">
-                        <ChartLineMultiple />
-                    </section>
-                    <CalendarEng />
-                </div>
-                {/* Patient Overview */}
-                <PatientList />
-            </main>
+                <section className="w-full  flex flex-col max-sm:py-5 py-10 overflow-y-auto gap-10 max-sm:gap-5">
+                    {/* Dashboard Metrics */}
+                    <DashboardMetrics />
+                    {/* Charts and Calendar */}
+                    <div className="w-full grid grid-cols-[1fr_20vw]  max-sm:grid-cols-1 max-sm:px-2 px-10 gap-5">
+                        <section className="relative w-full">
+                            <ChartLineMultiple />
+                        </section>
+                        <CalendarEng />
+                    </div>
+                    {/* Patient Overview */}
+                    <PatientList />
+                </section>
+            </section>
         </main>
     )
 }

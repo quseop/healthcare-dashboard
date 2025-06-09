@@ -23,7 +23,7 @@ export function CalendarEng() {
             defaultMonth={date}
             selected={date}
             onSelect={setDate}
-            className="rounded-2xl border w-[35%] shadow-none"
+            className="rounded-2xl bg-[#f9f9f9] border w-full shadow-none"
         />
     )
 }
@@ -46,7 +46,7 @@ function Calendar({
         <DayPicker
             showOutsideDays={showOutsideDays}
             className={cn(
-                "bg-background group/calendar p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
+                "bg-background group/calendar dark:bg-[#0B1C2C] p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent",
                 String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
                 String.raw`rtl:**:[.rdp-button\_previous>svg]:rotate-180`,
                 className

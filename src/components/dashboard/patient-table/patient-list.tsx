@@ -51,7 +51,7 @@ const PatientList = () => {
     ]
 
     return (
-        <main className="w-full px-10">
+        <main className="w-full px-10 max-sm:px-2">
             <PatientTable patients={samplePatients} />
         </main>
     )

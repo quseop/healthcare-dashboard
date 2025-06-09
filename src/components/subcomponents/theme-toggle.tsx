@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Sun, Moon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import {useTheme} from "@/components/subcomponents/theme-provider";
 
 export default function ThemeToggle() {
     const [isDarkMode, setIsDarkMode] = useState(false)
@@ -46,6 +47,27 @@ export default function ThemeToggle() {
                     )}
                 />
             </div>
+        </button>
+    )
+}
+
+
+
+
+export const ThemeToggler = () => {
+    const { theme, setTheme } = useTheme()
+
+    return (
+        <button
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="rounded-md p-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+        >
+            {theme === "light" ? (
+                <Moon className="h-5 w-5" />
+            ) : (
+                <Sun className="h-5 w-5" />
+            )}
+            <span className="sr-only">Toggle theme</span>
         </button>
     )
 }
