@@ -1,9 +1,9 @@
-# Healthcare Dashboard UI
+# Synthetic Healthcare Data Dashboard
 
 
 
 ## Overview
-A modern, responsive healthcare dashboard built with Next.js and React, designed to provide comprehensive healthcare analytics and patient management capabilities. This application leverages the power of TypeScript for type safety and Tailwind CSS for seamless styling.
+A React.js-based healthcare dashboard designed to visualize and analyze synthetic patient data, adhering to modern web development best practices.
 
 ## Features
 - 📊 Real-time healthcare analytics
