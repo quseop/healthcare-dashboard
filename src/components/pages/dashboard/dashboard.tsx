@@ -1,9 +1,9 @@
 import SideNavigationBar from "@/components/subcomponents/side-navigation-bar";
-import DashboardMetrics from "@/components/dashboard/metrics/dashboard-metrics";
+import DashboardMetrics from "@/components/pages/dashboard/metrics/dashboard-metrics";
 import ResponsiveHeader from "@/components/subcomponents/responsive-header";
-import {ChartLineMultiple} from "@/components/dashboard/charts/area-chart";
-import {CalendarEng} from "@/components/dashboard/calendar/calendar";
-import PatientList from "@/components/dashboard/patient-table/patient-list";
+import {ChartLineMultiple} from "@/components/pages/dashboard/charts/area-chart";
+import {CalendarEng} from "@/components/pages/dashboard/calendar/calendar";
+import PatientList from "@/components/pages/dashboard/patient-table/patient-list";
 
 export function Dashboard() {
     return (

@@ -1,4 +1,4 @@
-import PatientTable from "@/components/dashboard/patient-table/patient-table";
+import PatientTable from "@/components/pages/dashboard/patient-table/patient-table";
 import {Patient} from "@/lib/types";
 
 const PatientList = () => {

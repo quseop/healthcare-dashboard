@@ -1,4 +1,4 @@
-import MetricBlock, {MetricBlockProps} from "@/components/dashboard/metrics/metric-block";
+import MetricBlock, {MetricBlockProps} from "@/components/pages/dashboard/metrics/metric-block";
 import {BedSingle, Stethoscope, UserRoundCheck, Users2Icon} from "lucide-react";
 
 
