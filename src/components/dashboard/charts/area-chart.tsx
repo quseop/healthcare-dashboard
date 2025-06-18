@@ -19,16 +19,16 @@ import {Dot} from "lucide-react";
 export const description = "A multiple line chart"
 
 const chartData = [
-    { time: "10:00", onTime: 52, Late: 30 },
-    { time: "11:00", onTime: 59, Late: 10 },
-    { time: "12:00", onTime: 65, Late: 40 },
-    { time: "13:00", onTime: 42, Late: 20 },
-    { time: "14:00", onTime: 45, Late: 50 },
-    { time: "15:00", onTime: 50, Late: 60 },
-    { time: "16:00", onTime: 62, Late: 70 },
-    { time: "17:00", onTime: 45, Late: 75 },
-    { time: "18:00", onTime: 48, Late: 80 },
-    { time: "19:00", onTime: 55, Late: 65 },
+    { time: "11:00", onTime: 59, onTimeM: 59, Late: 10, LateM: 10 },
+    { time: "10:00", onTime: 52, onTimeM: 52, Late: 30, LateM: 30 },
+    { time: "12:00", onTime: 65, onTimeM: 65, Late: 40, LateM: 65 },
+    { time: "13:00", onTime: 42, onTimeM: 42, Late: 20, LateM: 20 },
+    { time: "14:00", onTime: 45, onTimeM: 45, Late: 50, LateM: 50 },
+    { time: "15:00", onTime: 50, onTimeM: 50, Late: 60, LateM: 60 },
+    { time: "16:00", onTime: 62, onTimeM: 62, Late: 70, LateM: 70 },
+    { time: "17:00", onTime: 45, onTimeM: 45, Late: 75, LateM: 75 },
+    { time: "18:00", onTime: 48, onTimeM: 48, Late: 80, LateM: 80 },
+    { time: "19:00", onTime: 55, onTimeM: 55, Late: 65, LateM: 65 },
 ];
 
 const chartConfig = {
@@ -94,7 +94,7 @@ export function ChartLineMultiple() {
                         />
                         {/* Mobile Version*/}
                         <Line
-                            dataKey="onTime"
+                            dataKey="onTimeM"
                             type="monotone"
                             stroke="var(--color-onTime)"
                             strokeWidth={2}
@@ -111,7 +111,7 @@ export function ChartLineMultiple() {
                         />
                         {/* Mobile Version */}
                         <Line
-                            dataKey="Late"
+                            dataKey="LateM"
                             type="monotone"
                             stroke="var(--color-Late)"
                             strokeWidth={2}
